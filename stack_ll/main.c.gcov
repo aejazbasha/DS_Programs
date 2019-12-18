@@ -1,0 +1,54 @@
+        -:    0:Source:main.c
+        -:    0:Graph:main.gcno
+        -:    0:Data:main.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1:#include<stdio.h>
+        -:    2:#include<stdlib.h>
+        -:    3:#include "stack.h"
+        -:    4:
+        -:    5:#if 0
+        -:    6:struct node 
+        -:    7:{
+        -:    8:	int data;
+        -:    9:	struct node *next;
+        -:   10:};
+        -:   11:struct node *top = NULL;
+        -:   12:#endif
+        -:   13://struct node *top = NULL;
+        -:   14:
+       10:   15:int main()
+        -:   16:{
+        -:   17:	
+        -:   18:	int ch,val;
+        -:   19:	while(1)
+        -:   20:	{
+       10:   21:		printf("1.push\n");
+       10:   22:		printf("2.pop\n");
+       10:   23:		printf("3.display\n");
+       10:   24:		printf("4.peek\n");
+       10:   25:		printf("5.exit\n");
+        -:   26:		
+       10:   27:		printf("enter your choice\n");
+       10:   28:		scanf("%d",&ch);
+       10:   29:		switch(ch)
+        -:   30:		{
+        3:   31:			case 1: printf("enter the val to be pushed\n");
+        3:   32:				scanf("%d",&val); 	
+        3:   33:				push(val);
+        3:   34:				break;
+        1:   35:			case 2:	val = pop();
+        1:   36:				printf("popped val is %d\n",val);
+        1:   37:				break;
+        3:   38:			case 3:	display();
+        3:   39:				break;
+        1:   40:			case 4:	val = peek();
+        1:   41:				printf("peek element is %d\n",val);
+        1:   42:				break;
+        1:   43:			case 5:	exit(0);
+        1:   44:			default: printf("enter correct choice\n");
+        -:   45:				 
+        -:   46:		}
+        9:   47:	}
+        -:   48:	return 0;
+        -:   49:}
