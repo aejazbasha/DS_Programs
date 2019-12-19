@@ -8,6 +8,9 @@ void delete_beg();
 void delete_end();
 int isEmpty();
 int get_integer();
+void delete_specified_element(int);
+void detect_loop();
+void list_error();
 
 typedef struct node
 {

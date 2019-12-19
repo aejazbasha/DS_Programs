@@ -9,7 +9,7 @@ void delete_end()
 	temp = head;
 	/* if list is empty */
 	if(isEmpty())
-		printf("%salready empty,cannot delete%s\n", red, none);
+		printf("%slist is already empty,cannot delete%s\n", red, none);
 	/*if list having only one node */
 	else if( temp->next == NULL)
 		delete_beg();
@@ -21,6 +21,7 @@ void delete_end()
 			temp = temp->next;
 		}
 		temp1->next=NULL;
+		printf("%sdeleting the node with value %d%s\n", blue, temp->data, none);
 		free(temp);
 		temp = NULL;
 	}

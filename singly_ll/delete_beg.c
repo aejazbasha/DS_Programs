@@ -8,7 +8,7 @@ void delete_beg()
 	SINGLYNODE_TypeDef *temp = NULL;
 	/* if list is empty */
 	if(isEmpty())
-		printf("%salready empty,cannot delete%s\n", red, none);
+		printf("%slist is already empty,cannot delete%s\n", red, none);
 	else {
 	temp=head;
 	head=head->next;
