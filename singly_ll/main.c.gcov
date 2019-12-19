@@ -1,0 +1,66 @@
+        -:    0:Source:main.c
+        -:    0:Graph:main.gcno
+        -:    0:Data:main.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1:#include<stdio.h>
+        -:    2:#include"ds.h"
+        -:    3:#include <stdlib.h>
+        -:    4:
+        -:    5:struct node
+        -:    6:{
+        -:    7:	int data;
+        -:    8:	struct node *next;
+        -:    9:};
+        -:   10:
+        -:   11:
+        7:   12:int main()
+        -:   13:{
+        -:   14:   int option,val,key,pos,n;
+        -:   15:	do
+        -:   16:	{
+        -:   17:		
+        7:   18:		printf("\n 3: Display the list\n 1: Add a node at the beginning\n 2: Add a node at the end");
+        -:   19:		
+        7:   20:		printf("\n 4: Delete a node from the beginning\n 5: Delete a node from the end\n 6:EXIT");
+        -:   21:		
+        7:   22:		printf("\n Enter your option : ");
+        7:   23:		scanf("%d", &option);
+        -:   24:
+        7:   25:		switch(option)
+        -:   26:		{		
+        2:   27:			case 1:	printf("enter value to insert at begining of linked list\n");
+        2:   28:				n=scanf("%d",&val);
+        2:   29:				head = insert_beg(head,val);
+        2:   30:				if(n==0)
+    #####:   31:					exit(0);
+        2:   32:				break;
+        -:   33:		
+    #####:   34:			case 2: printf("enter value to insert at end of linked list\n");
+    #####:   35:				n=scanf("%d",&val);
+    #####:   36:				head = insert_end(head,val);
+    #####:   37:				if(n==0)
+    #####:   38:					exit(0);
+    #####:   39:				break;
+        -:   40:
+        -:   41:			case 3: 
+        2:   42:				display(head);
+        2:   43:				break;
+        -:   44:		
+        -:   45:		
+        1:   46:			case 4:	printf("enter value to delete at begining of linked list\n");
+        1:   47:				head = delete_beg(head);
+        1:   48:				break;
+        -:   49:		
+    #####:   50:			case 5: printf("enter value to delete at end of linked list\n");
+    #####:   51:				head = delete_end(head);
+    #####:   52:				break;
+        -:   53:
+        -:   54:			
+        -:   55:		}
+        -:   56:	
+        7:   57:	}while(option !=6);
+        -:   58:
+        1:   59:return 0;
+        -:   60:} 
+        -:   61:
