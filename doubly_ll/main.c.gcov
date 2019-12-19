@@ -1,0 +1,51 @@
+        -:    0:Source:main.c
+        -:    0:Graph:main.gcno
+        -:    0:Data:main.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1:#include<stdio.h>
+        -:    2:#include <stdlib.h>
+        -:    3:#include"doubly.h"
+        -:    4:struct node
+        -:    5:{
+        -:    6:	struct node *prev;
+        -:    7:	int data;
+        -:    8:	struct node *next;
+        -:    9:};
+        1:   10:int main()
+        -:   11:{
+        1:   12:	struct node *head=NULL;
+        -:   13:	int choice,val,key,pos;
+        -:   14:	do
+        -:   15:	{
+        7:   16:		printf("1.insert_at_end\n"); 
+        7:   17:		printf("2.delete_from_end\n");
+        7:   18:		printf("3.create list\n");
+        7:   19:		printf("4.display\n");
+        7:   20:		printf("5.addtoempty\n");
+        7:   21:		printf("6.exit\n");
+        7:   22:		printf("enter your choice\n");
+        7:   23:		scanf("%d",&choice);
+        -:   24:	
+        7:   25:		switch(choice)
+        -:   26:		{
+        2:   27:			case 1: printf("enter elements to be inserted\n");
+        2:   28:				scanf("%d",&val);
+        2:   29:				head = insert_at_end(head,val);
+        2:   30:				break;
+        1:   31:			case 2: head = delete_end(head);
+        1:   32:				break;
+    #####:   33:			case 3: head = create_list(head);
+    #####:   34:				break;
+        -:   35:			
+        2:   36:			case 4: display(head);
+        2:   37:				break;
+        1:   38:			case 5: printf("enter elements to be inserted\n");
+        1:   39:				scanf("%d",&val);
+        1:   40:				head = addtoempty(head,val);
+        1:   41:				break;
+        -:   42:		}
+        7:   43:	}while(choice!=6);
+        1:   44:return 0;
+        -:   45:}
+        -:   46:
